@@ -1,13 +1,35 @@
 import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Border from '../../Common/Border/Border';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const Registration = () => {
     const [errors, setErrors] = useState('');
     const emailRef = useRef('');
-    const passRef = useRef('');  
+    const passRef = useRef('');
     const rePassRef = useRef('');
+    const navigate = useNavigate();
+
+    //registration from firebase hook
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    if (error) {
+        setErrors(error.message)
+    }
+    let load;
+    if (loading) {
+        load = loading;
+    }
+    if (user) {
+        navigate('/');
+    }
+    
 
     const handleCreateUser = event => {
         event.preventDefault();
@@ -16,6 +38,9 @@ const Registration = () => {
         const rePass = rePassRef?.current?.value;
         if (pass !== rePass) {
             setErrors('Error: your two password are not matching');
+        }
+        else {
+            createUserWithEmailAndPassword(email, pass);
         }
 
 
