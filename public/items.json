@@ -1,0 +1,182 @@
+[
+    {
+        "_id":1,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":2,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":3,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":4,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":5,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":6,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":7,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":8,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":9,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":10,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":11,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":12,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":13,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":14,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":15,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":16,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":17,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":18,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":19,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    },
+    {
+        "_id":20,
+        "name":"Servicing",
+        "img":"https://i.ibb.co/ryRJhRW/Background-resize-1.png",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa corrupti ut incidunt officia temporibus sit ex soluta! Neque adipisci unde quis sint libero dolor quas reiciendis amet ipsam facere voluptatum, sequi ad aut quisquam voluptate. Explicabo tenetur alias hic.",
+        "price":"1000 $",
+        "quantity":10,
+        "supplierName":"Sniper Man"
+    }
+]

@@ -1,10 +1,13 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import banner1 from '../../../../src/images/banner/Background-resize-1.png'
+import banner1 from '../../../../src/images/banner/Background-resize-1.png';
+import banner2 from '../../../../src/images/banner/banner1.jpg';
+import banner3 from '../../../../src/images/banner/banner3.jpg';
+import banner5 from '../../../../src/images/banner/banner5.jpg';
 
 const Banner = () => {
     return (
-        <Carousel fade>
+        <Carousel fade className='pb-5'>
             <Carousel.Item>
                 <img
                 style={{height:"800px"}}
@@ -21,7 +24,7 @@ const Banner = () => {
                 <img
                 style={{ height: "800px" }}
                 className="d-block w-100"
-                src={banner1}
+                src={banner2}
                 alt="Second slide"
                 />
 
@@ -34,7 +37,7 @@ const Banner = () => {
                 <img
                 style={{height:"800px"}}
                 className="d-block w-100"
-                src={banner1}
+                src={banner3}
                 alt="Third slide"
                 />
 
