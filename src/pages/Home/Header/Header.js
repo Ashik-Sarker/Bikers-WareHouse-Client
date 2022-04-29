@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import Banner from '../Banner/Banner';
 
 const Header = () => {
     return (
-        <Navbar className='' collapseOnSelect expand="lg" bg="light" variant="light">
+        <div>
+            <Navbar className='' collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
                 <Navbar.Brand style={{letterSpacing:"6px"}} className='fs-2 fw-bold text-primary' href="#home">BIKERS WAREHOUSE</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -27,7 +29,9 @@ const Header = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+            </Navbar>
+            {/* Banner section */}
+        </div>
     );
 };
 
