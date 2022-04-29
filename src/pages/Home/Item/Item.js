@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Item = ({ item }) => {
-    const { name, price, quantity, img, description, supplierName } = item;
-    console.log(item);
+    const { _id, name, price, quantity, img, description, supplierName } = item;
+    const navigate = useNavigate();
     return (
         <Col>
             <Card>
@@ -14,7 +15,7 @@ const Item = ({ item }) => {
                     <Card.Text>{price}</Card.Text>
                     <Card.Text>Supplier Name:  {supplierName}</Card.Text>
                     <Card.Text>Quantity:  {quantity}</Card.Text>
-                    <Button className='w-100 py-2' variant="primary">Go somewhere</Button>
+                    <Button onClick={()=>navigate(`/stockupdate/${_id}`)} className='w-100 py-2' variant="primary">Stock Update</Button>
                 </Card.Body>
             </Card>
         </Col>
