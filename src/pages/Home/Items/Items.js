@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import useItems from '../../../hooks/useItems';
 import Item from '../Item/Item';
