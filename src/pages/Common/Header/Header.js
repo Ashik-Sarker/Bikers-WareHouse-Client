@@ -32,13 +32,21 @@ const Header = () => {
                 </NavDropdown>
                 </Nav>
                 <Nav>
-                <Nav.Link as={Link} to='/registration'>Registration</Nav.Link> 
+                 
                 {
                     user
                     ? 
-                    <button className='border-0 bg-light' onClick={handleSignOut}>Signout</button>
+                    <div> 
+                        <button className='border-0 bg-light' onClick={handleSignOut}>Manage Items</button>
+                        <button className='border-0 bg-light' onClick={handleSignOut}>Add Items</button>
+                        <button className='border-0 bg-light' onClick={handleSignOut}>My Items</button>
+                        <button className='border-0 bg-primary text-light rounded py-2 px-3' onClick={handleSignOut}>Signout</button>
+                    </div>
                     :
-                    <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                    <div>
+                        <Nav.Link style={{display:"inline-block"}} as={Link} to='/login'>Login</Nav.Link>
+                        <Nav.Link style={{display:"inline-block"}} as={Link} to='/registration'>Registration</Nav.Link>
+                    </div>
                 }
 
                 </Nav>
