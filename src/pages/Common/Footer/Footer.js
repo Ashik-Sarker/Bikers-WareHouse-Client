@@ -65,7 +65,7 @@ const Footer = () => {
                 </div>
             </div>
             <Border></Border>
-            <p>Copyright @ {year} <span className='text-primary'>by Ashik</span></p>
+            <p className='text-center'>Copyright @ {year} <span className='text-primary'>by Ashik</span></p>
         </div>
     );
 };

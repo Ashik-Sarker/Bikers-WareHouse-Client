@@ -7,6 +7,7 @@ import Header from './pages/Common/Header/Header';
 import Home from './pages/Home/Home/Home';
 import Items from './pages/Home/Items/Items';
 import StockUpdate from './pages/Home/StockUpdate/StockUpdate';
+import RequireAuth from './RequireAuth';
 
 
 function App() {
@@ -17,7 +18,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/items' element={<Items> </Items>}></Route>
-        <Route path='/stockupdate/:id' element={<StockUpdate></StockUpdate>}></Route>
+        <Route path='/stockupdate/:id' element={
+          <RequireAuth>
+            <StockUpdate></StockUpdate>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
       </Routes>

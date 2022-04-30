@@ -22,15 +22,11 @@ const Registration = () => {
     if (error) {
         setErrors(error.message)
     }
-    let load;
-    if (loading) {
-        load = loading;
-    }
     if (user) {
         navigate('/');
     }
     
-
+    //form handler
     const handleCreateUser = event => {
         event.preventDefault();
         const email = emailRef?.current?.value;
@@ -42,11 +38,9 @@ const Registration = () => {
         else {
             createUserWithEmailAndPassword(email, pass);
         }
-
-
     }
     return (
-        <div className='w-25 mx-auto'>
+        <div className='w-50 mx-auto'>
             <h2 style={{letterSpacing:"2px"}} className='my-3'>Create account</h2>
             <form onSubmit={handleCreateUser}>
                 <div className="mb-3">
@@ -68,6 +62,7 @@ const Registration = () => {
                     <input style={{border:"1px solid #737373"}} type="checkbox" className="form-check-input" id="exampleCheck1"/>
                     <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                 </div>
+                
                 <p className='text-danger'>{errors}</p>
                 <button type="submit" className="btn btn-primary py-2 px-5 my-3">Create</button>
             </form>
