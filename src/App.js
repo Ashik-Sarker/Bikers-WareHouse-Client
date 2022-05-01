@@ -6,6 +6,7 @@ import Footer from './pages/Common/Footer/Footer';
 import Header from './pages/Common/Header/Header';
 import Home from './pages/Home/Home/Home';
 import Items from './pages/Home/Items/Items';
+import Inventories from './pages/Home/ManageInventory/Inventories/Inventories';
 import StockUpdate from './pages/Home/StockUpdate/StockUpdate';
 import RequireAuth from './RequireAuth';
 
@@ -25,6 +26,7 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
+        <Route path='/inventories' element={<Inventories></Inventories>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
