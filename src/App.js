@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './pages/Authentication/Login/Login';
 import Registration from './pages/Authentication/Registration/Registration';
+import AddNewItem from './pages/Common/AddNewItem/AddNewItem';
 import Footer from './pages/Common/Footer/Footer';
 import Header from './pages/Common/Header/Header';
 import Home from './pages/Home/Home/Home';
@@ -27,6 +28,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='/inventories' element={<Inventories></Inventories>}></Route>
+        <Route path='/addItem' element={<AddNewItem></AddNewItem>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

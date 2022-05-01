@@ -29,8 +29,12 @@ const Header = () => {
                     user
                     ? 
                     <div> 
-                        <button className='border-0 bg-light'>Manage Items</button>
-                        <button className='border-0 bg-light'>Add Items</button>
+                        <button
+                        onClick={()=>navigate('/inventories')}
+                        className='border-0 bg-light'>Manage Items</button>
+                        <button 
+                        onClick={()=>navigate('/addItem')}
+                        className='border-0 bg-light'>Add Items</button>
                         <button className='border-0 bg-light'>My Items</button>
                         <button className='border-0 bg-primary text-light rounded py-2 px-3' onClick={handleSignOut}>Signout</button>
                     </div>
