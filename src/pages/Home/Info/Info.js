@@ -7,7 +7,7 @@ import vehicle from '../../../images/icon/vehicle.png'
 
 const Info = () => {
     return (
-        <div className='bg-light p-5'>
+        <div className='bg-light p-5 App'>
             <div className='container'>
             <h3 className='mb-5'>Enriching lives through more freedom, fitness, and fun!</h3>
             <div className="row row-cols-1 row-cols-md-4 g-4">

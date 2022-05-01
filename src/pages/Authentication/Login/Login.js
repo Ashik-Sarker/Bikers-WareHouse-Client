@@ -4,9 +4,9 @@ import Border from '../../Common/Border/Border';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../Common/Loading/Loading';
 
 const Login = () => {
-    const [errors, setErrors] = useState('');
     const emailRef = useRef('');
     const passRef = useRef('');
     const navigate = useNavigate();
@@ -21,8 +21,8 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    if (error) {
-        setErrors(error);
+    if (loading) {
+        return <Loading></Loading>
     }
     if (user) {
         navigate(from, { replace: true });
@@ -34,6 +34,7 @@ const Login = () => {
         const email = emailRef?.current?.value;
         const pass = passRef?.current?.value;
         signInWithEmailAndPassword(email, pass);
+        console.log(error.message);
     }
 
     return (
@@ -48,7 +49,6 @@ const Login = () => {
                 </div>
 
                 <p className='text-primary'>Forget your password?</p>
-                <p>{errors}</p>
                 <button type="submit" className="btn btn-primary my-3 py-2 px-5">Login</button>
                 <p>Are you new? <span className='text-primary'><Link to='/registration'>Please create an account</Link></span></p>
             </form>

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Border from '../../Common/Border/Border';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -11,7 +11,7 @@ const Registration = () => {
     const passRef = useRef('');
     const rePassRef = useRef('');
     const navigate = useNavigate();
-
+    
     //registration from firebase hook
     const [
         createUserWithEmailAndPassword,
@@ -19,11 +19,17 @@ const Registration = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    if (error) {
-        setErrors(error.message)
-    }
+    
+    //require auth section
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    console.log(from);
+    
+    // if (error) {
+    //     setErrors(error.message)
+    // }
     if (user) {
-        navigate('/');
+        navigate(from, { replace: true });
     }
     
     //form handler
