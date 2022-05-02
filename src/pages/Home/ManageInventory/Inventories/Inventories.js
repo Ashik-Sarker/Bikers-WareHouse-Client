@@ -32,8 +32,8 @@ const Inventories = () => {
         <div className='App'>
             <h1>Manage Inventory</h1>
             <h3>Items total: {items.length}</h3>
-            <button className='my-5 w-25 border-0 bg-primary text-light p-2 fs-5' onClick={() => navigate('/addItem')}>Add New Item</button>
-            <div className=" w-75 mx-auto row row-cols-4 row-cols-md-5 g-3">
+            <button className='my-5 w-50 border-0 bg-primary text-light p-2 fs-5' onClick={() => navigate('/addItem')}>Add New Item</button>
+            <div className=" w-75 mx-auto row row-cols-2 row-cols-md-5 g-3">
                 {
                     items.map(item => 
                           <div key={item._id} className="col">

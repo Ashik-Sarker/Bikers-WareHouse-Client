@@ -2,7 +2,7 @@ import React from 'react';
 
 const AddNewItem = () => {
 
-    const handleAddUser = event => {
+    const handleAddItem = event => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
@@ -13,6 +13,7 @@ const AddNewItem = () => {
         const description = event.target.description.value;
 
         const item = { name, email, img, supplierName, quantity, price, description };
+        console.log(item);
 
         //send data to the server
         fetch('http://localhost:5000/item', {
@@ -32,7 +33,7 @@ const AddNewItem = () => {
     return (
         <div>
             <h1 className='text-center'>Add New Items</h1>
-            <form className='text-center' onSubmit={handleAddUser}>
+            <form className='text-center' onSubmit={handleAddItem}>
                 <input className='my-1 p-2 w-50' type="text" name="name" placeholder='name' required/><br />
                 <input className='my-1 p-2 w-50' type="email" name="email" placeholder='email' required/><br />
                 <input className='my-1 p-2 w-50' type="text" name="img" placeholder='image' required/><br />
