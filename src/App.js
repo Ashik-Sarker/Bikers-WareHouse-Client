@@ -9,6 +9,7 @@ import Home from './pages/Home/Home/Home';
 import Items from './pages/Home/Items/Items';
 import Inventories from './pages/Home/ManageInventory/Inventories/Inventories';
 import StockUpdate from './pages/Home/StockUpdate/StockUpdate';
+import MyItems from './pages/MyItems/MyItems';
 import RequireAuth from './RequireAuth';
 
 
@@ -29,6 +30,11 @@ function App() {
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='/inventories' element={<Inventories></Inventories>}></Route>
         <Route path='/addItem' element={<AddNewItem></AddNewItem>}></Route>
+        <Route path='/myitems' element={
+          <RequireAuth>
+            <MyItems></MyItems>
+          </RequireAuth>
+        }></Route>
       </Routes>
       <Footer></Footer>
     </div>
