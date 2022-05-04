@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useItems from '../../../../hooks/useItems';
 
 const Inventories = () => {
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/item')
-            .then(res => res.json())
-            .then(data => setItems(data))
-    },[])
+    //using custom hook
+    const [items, setItems] = useItems();
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/item')
+    //         .then(res => res.json())
+    //         .then(data => setItems(data))
+    // },[])
     const navigate = useNavigate();
 
     const handleUserDelete = id => {

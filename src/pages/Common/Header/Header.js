@@ -31,7 +31,7 @@ const Header = () => {
                     <div> 
                         <button
                         onClick={()=>navigate('/inventories')}
-                        className='border-0 bg-light'>Manage Items</button>
+                        className='border-0 bg-light'>Manage Inventory</button>
                         <button 
                         onClick={()=>navigate('/addItem')}
                         className='border-0 bg-light'>Add Items</button>
