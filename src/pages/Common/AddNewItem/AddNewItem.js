@@ -1,6 +1,9 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const AddNewItem = () => {
+    const [user] = useAuthState(auth);
 
     const handleAddItem = event => {
         event.preventDefault();
@@ -35,7 +38,7 @@ const AddNewItem = () => {
             <h1 className='text-center'>Add New Items</h1>
             <form className='text-center' onSubmit={handleAddItem}>
                 <input className='my-1 p-2 w-50' type="text" name="name" placeholder='name' required/><br />
-                <input className='my-1 p-2 w-50' type="email" name="email" placeholder='email' required/><br />
+                <input className='my-1 p-2 w-50' type="email" name="email" value={user.email} placeholder='email' required readOnly/><br />
                 <input className='my-1 p-2 w-50' type="text" name="img" placeholder='image' required/><br />
                 <input className='my-1 p-2 w-50' type="text" name="supplierName" placeholder='supplierName' required /><br />
                 <input className='my-1 p-2 w-50' type="text" name="quantity" placeholder='quantity' required/><br />

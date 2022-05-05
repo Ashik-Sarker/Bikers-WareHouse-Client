@@ -4,6 +4,7 @@ import Border from '../../Common/Border/Border';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../Common/Loading/Loading';
 
 const Registration = () => {
     const [errors, setErrors] = useState('');
@@ -11,6 +12,7 @@ const Registration = () => {
     const passRef = useRef('');
     const rePassRef = useRef('');
     const navigate = useNavigate();
+    const location = useLocation();
     
     //registration from firebase hook
     const [
@@ -18,16 +20,16 @@ const Registration = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    ] = useCreateUserWithEmailAndPassword(auth);
+    
     
     //require auth section
-    const location = useLocation();
     let from = location.state?.from?.pathname || "/";
     console.log(from);
     
-    // if (error) {
-    //     setErrors(error.message)
-    // }
+    if (loading) {
+        return <Loading></Loading>
+    }
     if (user) {
         navigate(from, { replace: true });
     }
@@ -40,6 +42,7 @@ const Registration = () => {
         const rePass = rePassRef?.current?.value;
         if (pass !== rePass) {
             setErrors('Error: your two password are not matching');
+            return;
         }
         else {
             createUserWithEmailAndPassword(email, pass);
@@ -70,10 +73,12 @@ const Registration = () => {
                 </div>
                 
                 <p className='text-danger'>{errors}</p>
+                <p>{error?.message}</p>
                 <button type="submit" className="btn btn-primary py-2 px-5 my-3">Create</button>
             </form>
 
             <p>Already have an account? <span className='text-primary'><Link to='/login'>Please login</Link></span></p>
+            
             <Border></Border>
             <SocialLogin></SocialLogin>
         </div>

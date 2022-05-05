@@ -13,6 +13,7 @@ const Header = () => {
         signOut(auth);
         navigate('/login');
     }
+    console.log(user);
     
     return (
         <Navbar sticky="top" className='py-4' collapseOnSelect expand="lg" bg="light" variant="light">
@@ -21,7 +22,7 @@ const Header = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
+                <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
                 </Nav>
                 <Nav>
                  
@@ -37,6 +38,8 @@ const Header = () => {
                         className='border-0 bg-light'>Add Items</button>
                         <button onClick={() => navigate('/myitems')} className='border-0 bg-light'>My Items</button>
                         <button className='border-0 bg-primary text-light rounded py-2 px-3' onClick={handleSignOut}>Signout</button>
+                        <img width="50px" className='rounded-circle' src={user.photoURL} alt="" />
+                        <p className='d-inline-block'>{user.displayName}</p>
                     </div>
                     :
                     <div>

@@ -9,10 +9,10 @@ import Loading from '../../Common/Loading/Loading';
 const Login = () => {
     const emailRef = useRef('');
     const passRef = useRef('');
+    //require auth section
     const navigate = useNavigate();
     const location = useLocation();
-    //require auth section
-     let from = location.state?.from?.pathname || "/";
+    const from = location.state?.from?.pathname || "/";
 
     //login with react firebase hooks
     const [
@@ -21,6 +21,8 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+   
+
     if (loading) {
         return <Loading></Loading>
     }
@@ -34,7 +36,6 @@ const Login = () => {
         const email = emailRef?.current?.value;
         const pass = passRef?.current?.value;
         signInWithEmailAndPassword(email, pass);
-        console.log(error.message);
     }
 
     return (
@@ -49,6 +50,7 @@ const Login = () => {
                 </div>
 
                 <p className='text-primary'>Forget your password?</p>
+                <p className='text-danger'>{error?.message}</p>
                 <button type="submit" className="btn btn-primary my-3 py-2 px-5">Login</button>
                 <p>Are you new? <span className='text-primary'><Link to='/registration'>Please create an account</Link></span></p>
             </form>
