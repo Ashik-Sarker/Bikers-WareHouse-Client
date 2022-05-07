@@ -13,7 +13,7 @@ const ErrorPage = () => {
                     <p>You might have the wrong address, or the page may have moved.</p>
                     <div>
                         <Link to={'/'}>
-                            <button className='border-0 px-5 py-2 mt-4 bg-primary text-light fs-5'>Back to home</button>
+                            <button style={{background:"#ff422e"}} className='border-0 px-5 py-2 mt-4 text-light fs-5'>Back to home</button>
                         </Link>
                     </div>
                 </Col>

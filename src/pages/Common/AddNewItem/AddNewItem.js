@@ -35,15 +35,15 @@ const AddNewItem = () => {
     }
     return (
         <div>
-            <h1 className='text-center'>Add New Items</h1>
+            <h1 className='text-center my-4'>Add New Items</h1>
             <form className='text-center' onSubmit={handleAddItem}>
-                <input className='my-1 p-2 w-50' type="text" name="name" placeholder='name' required/><br />
+                <input className='my-1 p-2 w-50' type="text" name="name" placeholder='Enter your Item Name' required/><br />
                 <input className='my-1 p-2 w-50' type="email" name="email" value={user.email} placeholder='email' required readOnly/><br />
-                <input className='my-1 p-2 w-50' type="text" name="img" placeholder='image' required/><br />
-                <input className='my-1 p-2 w-50' type="text" name="supplierName" placeholder='supplierName' required /><br />
-                <input className='my-1 p-2 w-50' type="text" name="quantity" placeholder='quantity' required/><br />
-                <input className='my-1 p-2 w-50' type="text" name="price" placeholder='price' required/><br />
-                <input className='my-1 p-2 w-50' type="text" name="description" placeholder='description' required /><br />
+                <input className='my-1 p-2 w-50' type="text" name="img" placeholder='Enter Your Image URL' required/><br />
+                <input className='my-1 p-2 w-50' type="text" name="supplierName" placeholder='Enter SupplierName' required /><br />
+                <input className='my-1 p-2 w-50' type="text" name="quantity" placeholder='Add Quantity' required/><br />
+                <input className='my-1 p-2 w-50' type="text" name="price" placeholder='Add Price' required/><br />
+                <input className='my-1 p-2 w-50' type="text" name="description" placeholder='Add Item Descriptions' required /><br />
                 <input className='my-1 p-2 w-50 bg-primary text-light border-0 fs-5' type="submit" value="Create Item" />
             </form>
         </div>
