@@ -12,7 +12,7 @@ const Items = () => {
     return (
         <div className='mt-5'>
             <Container>
-            <h1 style={{letterSpacing:"6px"}} className='mb-5 text-primary text-center'>MOST POPULAR ITEMS</h1>
+            <h1 style={{letterSpacing:"6px"}} className='mb-5 text-center'>MOST POPULAR ITEMS</h1>
             <Row xs={1} md={3} className="g-4">
                 {
                     items.map(item => <Item

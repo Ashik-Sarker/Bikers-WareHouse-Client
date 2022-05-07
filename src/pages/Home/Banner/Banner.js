@@ -16,8 +16,8 @@ const Banner = () => {
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h3 className='fs-1 text-info fw-bold' style={{letterSpacing:"10px"}}>1400CC Segment</h3>
+                <p className="fs-5">This is our most popular resale bike</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -29,8 +29,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3 className='fs-1 text-info fw-bold' style={{letterSpacing:"10px"}}>We have all bike accessories</h3>
+                <p className="fs-5">Enjoy you favorite vehicle and ride with friends and nearest one.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -42,8 +42,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <h3 className='fs-1 text-info fw-bold' style={{letterSpacing:"10px"}}>Find Your Best Tourist Bike</h3>
+                <p className="fs-5">Ride with confidence and make tour with nature</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
