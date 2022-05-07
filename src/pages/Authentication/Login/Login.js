@@ -13,6 +13,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
+    let err;
 
     //login with react firebase hooks
     const [
@@ -26,9 +27,9 @@ const Login = () => {
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
    
 
-    if (loading) {
-        return <Loading></Loading>
-    }
+    // if (loading) {
+    //     return <Loading></Loading>
+    // }
     if (user) {
         navigate(from, { replace: true });
     }
@@ -44,7 +45,12 @@ const Login = () => {
     const resetPassword = async() => {
         const email = emailRef?.current?.value;
         await sendPasswordResetEmail(email);
-        alert('send email');
+        if (email) {
+            alert('send email');
+        }
+        else {
+            alert('Please add email first');
+        }
     }
 
     return (
@@ -58,8 +64,10 @@ const Login = () => {
                     <input ref={passRef} style={{border:"1px solid #737373"}} type="password" name='password' placeholder='Password' className="form-control py-2" id="exampleInputPassword1" required/>
                 </div>
 
-                {/* <p className='text-primary'>Reset your password?</p> */}
                 <p className='text-danger'>{error?.message}</p>
+                {
+                    loading && <p className='text-danger'>Loading...</p>
+                }
                 <button type="submit" className="btn btn-primary my-3 py-2 px-5">Login</button>
 
 
