@@ -5,6 +5,7 @@ import CustomerReview from '../CustomerReview/CustomerReview';
 import GearUpRiding from '../GearUpRiding/GearUpRiding';
 import Info from '../Info/Info';
 import Items from '../Items/Items';
+import JoinTheRide from '../JoinTheRide/JoinTheRide';
 import ManageInventory from '../ManageInventory/ManageInventory';
 import PerfectTour from '../PerfectTour/PerfectTour';
 
@@ -18,6 +19,7 @@ const Home = () => {
             <GearUpRiding></GearUpRiding>
             <PerfectTour></PerfectTour>
             {/* <Border></Border> */}
+            <JoinTheRide></JoinTheRide>
             {/* <CustomerReview></CustomerReview> */}
         </div>
     );

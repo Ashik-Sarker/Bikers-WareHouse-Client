@@ -71,6 +71,7 @@ const StockUpdate = () => {
                         <div className="card-body">
                             <h5 className="card-title">{item.name}</h5>
                             <p className="card-text">Supplier Name: {item.supplierName}</p>
+                            <p>Product ID: {item._id}</p>
                             
                             <p className="card-text">Email: {item.email}</p>
                             <p className="card-text">Prduct Quantity:  {item.quantity}</p>

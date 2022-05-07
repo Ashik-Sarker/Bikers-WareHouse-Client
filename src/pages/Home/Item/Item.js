@@ -9,10 +9,10 @@ const Item = ({ item }) => {
         <Col>
             <Card>
                 <Card.Img variant="top" src={img} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                <Card.Body style={{fontFamily:"sans-serif"}}>
+                    <Card.Title className='fs-3' style={{letterSpacing:"2px"}}>{name}</Card.Title>
                     <Card.Text>{description}</Card.Text>
-                    <Card.Text>{price}</Card.Text>
+                    <Card.Text>Price: ${price}</Card.Text>
                     <Card.Text>Supplier Name:  {supplierName}</Card.Text>
                     <Card.Text>Quantity:  {quantity}</Card.Text>
                     <Button onClick={()=>navigate(`/stockupdate/${_id}`)} className='w-100 py-2' variant="primary">Stock Update</Button>

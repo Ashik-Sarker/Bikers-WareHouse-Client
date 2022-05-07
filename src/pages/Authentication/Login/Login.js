@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Border from '../../Common/Border/Border';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Common/Loading/Loading';
 
@@ -21,6 +21,9 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    //reset passs
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
    
 
     if (loading) {
@@ -38,6 +41,12 @@ const Login = () => {
         signInWithEmailAndPassword(email, pass);
     }
 
+    const resetPassword = async() => {
+        const email = emailRef?.current?.value;
+        await sendPasswordResetEmail(email);
+        alert('send email');
+    }
+
     return (
         <div className='w-50 mx-auto'>
             <h2 style={{letterSpacing:"2px"}} className='my-3'>Login</h2>
@@ -49,10 +58,15 @@ const Login = () => {
                     <input ref={passRef} style={{border:"1px solid #737373"}} type="password" name='password' placeholder='Password' className="form-control py-2" id="exampleInputPassword1" required/>
                 </div>
 
-                <p className='text-primary'>Forget your password?</p>
+                {/* <p className='text-primary'>Reset your password?</p> */}
                 <p className='text-danger'>{error?.message}</p>
                 <button type="submit" className="btn btn-primary my-3 py-2 px-5">Login</button>
-                <p>Are you new? <span className='text-primary'><Link to='/registration'>Please create an account</Link></span></p>
+
+
+                <p>Forget password? <span className='text-primary'><Link to='/login' onClick={resetPassword} className='text-decoration-none'>Reset Password</Link></span></p>
+
+
+                <p>Are you new? <span className='text-primary'><Link to='/registration' className='text-decoration-none'>Please create an account</Link></span></p>
             </form>
             <Border></Border>
             <SocialLogin></SocialLogin>

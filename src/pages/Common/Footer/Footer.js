@@ -1,5 +1,10 @@
 import React from 'react';
 import Border from '../Border/Border';
+import github from '../../../images/social_icon/github.png';
+import google from '../../../images/social_icon/google.png';
+import twitter from '../../../images/social_icon/twitter.png';
+import youtube from '../../../images/social_icon/youtube.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const date = new Date();
@@ -62,6 +67,12 @@ const Footer = () => {
                         </div>
                         </div>
                     </div>
+                </div>
+                < div className = 'd-flex w-25 mx-auto justify-content-center align-items-center mt-5' >
+                    <img style={{width:"13%"}} className="ms-3 bg-light rounded-circle p-2" src={github} alt="" srcset="" />
+                    <img style={{width:"13%"}} className="ms-3 bg-light rounded-circle p-2" src={google} alt="" srcset="" />
+                    <img style={{width:"13%"}} className="ms-3 bg-light rounded-circle p-2" src={twitter} alt="" srcset="" />
+                    <img style={{width:"13%"}} className="ms-3 bg-light rounded-circle p-2" src={youtube} alt="" srcset="" />
                 </div>
             </div>
             <Border></Border>

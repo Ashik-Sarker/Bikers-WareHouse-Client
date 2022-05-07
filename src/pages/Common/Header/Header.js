@@ -17,35 +17,42 @@ const Header = () => {
     
     return (
         <Navbar sticky="top" className='py-4' collapseOnSelect expand="lg" bg="light" variant="light">
-        <Container>
-            <Navbar.Brand style={{letterSpacing:"6px"}} className='fs-2 fw-bold text-primary' as={Link} to='/' >BIKERS WAREHOUSE</Navbar.Brand>
+        <Container fluid className='px-5'>
+            <Navbar.Brand style={{letterSpacing:"6px"}} className='fs-3 fw-bold text-primary me-5' as={Link} to='/' >BIKERS WAREHOUSE</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
+                    <Nav.Link className='text-dark' as={Link} to="/blogs">Blogs</Nav.Link>
+                    {
+                        user
+                        ?
+                        <Nav className='me-auto'>
+                            <Nav.Link className='text-dark' as={Link} to="/inventories">Manage Inventory</Nav.Link>
+                            <Nav.Link className='text-dark' as={Link} to="/addItem">Add Items</Nav.Link>
+                            <Nav.Link className='text-dark' as={Link} to="/myitems">My Items</Nav.Link>
+                        </Nav>
+                        :
+                        ""
+                    }
                 </Nav>
                 <Nav>
                  
                 {
                     user
                     ? 
-                    <div> 
-                        <button
-                        onClick={()=>navigate('/inventories')}
-                        className='border-0 bg-light'>Manage Inventory</button>
-                        <button 
-                        onClick={()=>navigate('/addItem')}
-                        className='border-0 bg-light'>Add Items</button>
-                        <button onClick={() => navigate('/myitems')} className='border-0 bg-light'>My Items</button>
-                        <button className='border-0 bg-primary text-light rounded py-2 px-3' onClick={handleSignOut}>Signout</button>
+                    <Nav className='me-auto'>
+                        <Nav.Link className='text-dark fs-5 me-5' onClick={handleSignOut} style={{display:"inline-block"}} as={Link} to='/login'>Sign Out</Nav.Link>
+                        
                         <img width="50px" className='rounded-circle' src={user.photoURL} alt="" />
-                        <p className='d-inline-block'>{user.displayName}</p>
-                    </div>
+                         <Nav.Link className='text-dark fs-5' eventKey={2} href="#memes">
+                            {user.displayName}
+                        </Nav.Link>
+                    </Nav>
                     :
-                    <div>
+                    <Nav className='me-auto'>
                         <Nav.Link style={{display:"inline-block"}} as={Link} to='/login'>Login</Nav.Link>
                         <Nav.Link style={{display:"inline-block"}} as={Link} to='/registration'>Registration</Nav.Link>
-                    </div>
+                    </Nav>
                 }
 
                 </Nav>

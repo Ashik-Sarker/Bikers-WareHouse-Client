@@ -5,14 +5,18 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Common/Loading/Loading';
+import { sendEmailVerification } from 'firebase/auth';
 
 const Registration = () => {
     const [errors, setErrors] = useState('');
+    const [agree, setAgree] = useState(false);
     const emailRef = useRef('');
     const passRef = useRef('');
     const rePassRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
+
+    console.log(agree);
     
     //registration from firebase hook
     const [
@@ -20,7 +24,7 @@ const Registration = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     
     
     //require auth section
@@ -67,14 +71,17 @@ const Registration = () => {
                 <div className="mb-3">
                     <input ref={rePassRef} style={{border:"1px solid #737373"}} type="password" name='repeatPassword' placeholder='Re-Enter password' className="form-control py-2" id="exampleInputPassword2" required/>
                 </div>
+
                 <div className="mb-3 form-check">
-                    <input style={{border:"1px solid #737373"}} type="checkbox" className="form-check-input" id="exampleCheck1"/>
+                    <input 
+                    onClick={()=>setAgree(!agree)}
+                    style={{border:"1px solid #737373"}} type="checkbox" name='terms' className="form-check-input" id="exampleCheck1"/>
                     <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                 </div>
-                
+  
                 <p className='text-danger'>{errors}</p>
-                <p>{error?.message}</p>
-                <button type="submit" className="btn btn-primary py-2 px-5 my-3">Create</button>
+                <p className='text-danger'>{error?.message}</p>
+                <button disabled={!agree} type="submit" className="btn btn-primary py-2 px-5 my-3">Create</button>
             </form>
 
             <p>Already have an account? <span className='text-primary'><Link to='/login'>Please login</Link></span></p>
