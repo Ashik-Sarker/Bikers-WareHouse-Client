@@ -8,6 +8,7 @@ import auth from '../../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import useToken from '../../../hooks/useToken';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -28,13 +29,14 @@ const Login = () => {
 
     //reset passs
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+    const [token] = useToken(user);
    
 
     // if (loading) {
     //     return <Loading></Loading>
     // }
-    if (user) {
-        // navigate(from, { replace: true });
+    if (token) {
+        navigate(from, { replace: true });
     }
 
     //form handler
@@ -42,22 +44,16 @@ const Login = () => {
         event.preventDefault();
         const email = emailRef?.current?.value;
         const pass = passRef?.current?.value;
-
         await signInWithEmailAndPassword(email, pass);
-        const { data } = await axios.post('https://fast-plains-14687.herokuapp.com/login', { email });
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
     }
 
     const resetPassword = async() => {
         const email = emailRef?.current?.value;
         await sendPasswordResetEmail(email);
         if (email) {
-            // alert('send email');
             toast("send email to your account")
         }
         else {
-            // alert('Please add email first');
             toast('Please add email first then reset pass')
         }
     }

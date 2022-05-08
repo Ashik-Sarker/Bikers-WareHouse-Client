@@ -6,6 +6,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Common/Loading/Loading';
 import { sendEmailVerification } from 'firebase/auth';
+import useToken from '../../../hooks/useToken';
 
 const Registration = () => {
     const [errors, setErrors] = useState('');
@@ -15,7 +16,8 @@ const Registration = () => {
     const rePassRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-
+    
+    
     console.log(agree);
     
     //registration from firebase hook
@@ -26,6 +28,7 @@ const Registration = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     
+    const [token] = useToken(user);
     
     //require auth section
     let from = location.state?.from?.pathname || "/";
@@ -34,7 +37,7 @@ const Registration = () => {
     if (loading) {
         return <Loading></Loading>
     }
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
     
