@@ -34,7 +34,7 @@ const Login = () => {
     //     return <Loading></Loading>
     // }
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
     //form handler
@@ -45,7 +45,8 @@ const Login = () => {
 
         await signInWithEmailAndPassword(email, pass);
         const { data } = await axios.post('https://fast-plains-14687.herokuapp.com/login', { email });
-        console.log(data);
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
 
     const resetPassword = async() => {

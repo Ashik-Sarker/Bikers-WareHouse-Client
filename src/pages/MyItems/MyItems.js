@@ -1,22 +1,44 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useItems from '../../hooks/useItems';
+import { signOut } from 'firebase/auth';
 
 const MyItems = () => {
     const [myItems, setMyItems] = useState([]);
     const [user] = useAuthState(auth);
     const email = user?.email;
     const [items, setItems] = useItems();
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const url = `https://fast-plains-14687.herokuapp.com/myItem?email=${email}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setMyItems(data);
-            })
+        const getItem = async () => {
+            const url = `https://fast-plains-14687.herokuapp.com/myItem?email=${email}`;
+            try {
+                const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
+            setMyItems(data)
+            }
+            catch(error) {
+                console.log(error.message);
+                if (error.response.status === 403 || error.response.status === 401) {
+                    signOut(auth);
+                    navigate('/login');
+                }
+            }
+        }
+        getItem();
+        // fetch(url)
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        //         setMyItems(data);
+        //     })
     }, [user]);
 
     const handleUserDelete = id => {
@@ -46,7 +68,7 @@ const MyItems = () => {
             <div className="row row-cols-1 row-cols-md-3 g-3 mt-4">
                 {
                     myItems.map(item => 
-                        <div className="col">
+                        <div className="col" key={item._id}>
                             <div className="card h-100">
                             <img src={item.img} className="card-img-top" alt="..."/>
                             <div className="card-body">
