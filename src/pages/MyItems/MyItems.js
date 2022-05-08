@@ -10,7 +10,7 @@ const MyItems = () => {
     const [items, setItems] = useItems();
 
     useEffect(() => {
-        const url = `http://localhost:5000/myItem?email=${email}`;
+        const url = `https://fast-plains-14687.herokuapp.com/myItem?email=${email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -23,7 +23,7 @@ const MyItems = () => {
         const proceed = window.confirm('are you sure you want to delete');
         if (proceed) {
             console.log('deleting user with id', id);
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://fast-plains-14687.herokuapp.com/item/${id}`;
             fetch(url, {
                     method: 'DELETE'
                 })

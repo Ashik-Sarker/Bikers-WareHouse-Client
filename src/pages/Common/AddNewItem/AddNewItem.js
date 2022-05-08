@@ -19,7 +19,7 @@ const AddNewItem = () => {
         console.log(item);
 
         //send data to the server
-        fetch('http://localhost:5000/item', {
+        fetch('https://fast-plains-14687.herokuapp.com/item', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

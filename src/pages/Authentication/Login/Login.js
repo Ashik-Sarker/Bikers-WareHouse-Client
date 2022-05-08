@@ -78,7 +78,7 @@ const Login = () => {
                 <p>Forget password? <span className='text-primary'><Link to='/login' onClick={resetPassword} className='text-decoration-none'>Reset Password</Link></span></p>
 
 
-                <p>Are you new? <span className='text-primary'><Link to='/registration' className='text-decoration-none'>Please create an account</Link></span></p>
+                <p>Are you new? <span className='text-primary'><Link to='/registration' state={location.state} className='text-decoration-none'>Please create an account</Link></span></p>
             </form>
             <ToastContainer />
             <Border></Border>

@@ -10,7 +10,7 @@ const StockUpdate = () => {
     // const quantity = quantityRef.current.value;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/item/${id}`)
+        fetch(`https://fast-plains-14687.herokuapp.com/item/${id}`)
             .then(res => res.json())
             .then(data => setItem(data))
     },[item])
@@ -35,7 +35,7 @@ const StockUpdate = () => {
             description
         };
         //send data to the server
-        fetch(`http://localhost:5000/item/${id}`, {
+        fetch(`https://fast-plains-14687.herokuapp.com/item/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

@@ -29,7 +29,7 @@ const Registration = () => {
     
     //require auth section
     let from = location.state?.from?.pathname || "/";
-    console.log(from);
+    console.log(location);
     
     if (loading) {
         return <Loading></Loading>
