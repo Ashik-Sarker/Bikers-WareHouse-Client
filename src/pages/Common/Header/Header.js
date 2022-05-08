@@ -26,8 +26,8 @@ const Header = () => {
                         user
                         ?
                         <Nav className='me-auto'>
-                            <Nav.Link className='text-dark' as={Link} to="/inventories">Manage Inventory</Nav.Link>
-                            <Nav.Link className='text-dark' as={Link} to="/addItem">Add Items</Nav.Link>
+                            <Nav.Link className='text-dark' as={Link} to="/inventories">Manage Items</Nav.Link>
+                            <Nav.Link className='text-dark' as={Link} to="/addItem">Add Item</Nav.Link>
                             <Nav.Link className='text-dark' as={Link} to="/myitems">My Items</Nav.Link>
                         </Nav>
                         :
