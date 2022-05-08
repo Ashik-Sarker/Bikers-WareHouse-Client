@@ -69,10 +69,10 @@ const Footer = () => {
                     </div>
                 </div>
                 < div className = 'd-flex w-25 mx-auto justify-content-center align-items-center mt-5' >
-                    <img style={{width:"15%"}} className="ms-3 bg-light rounded-circle p-1" src={github} alt="" srcset="" />
-                    <img style={{width:"15%"}} className="ms-3 bg-light rounded-circle p-1" src={google} alt="" srcset="" />
-                    <img style={{width:"15%"}} className="ms-3 bg-light rounded-circle p-1" src={twitter} alt="" srcset="" />
-                    <img style={{width:"15%"}} className="ms-3 bg-light rounded-circle p-1" src={youtube} alt="" srcset="" />
+                    <img style={{width:"15%"}} className="ms-3 bg-light rounded-circle p-1" src={github} alt="" srcSet="" />
+                    <img style={{width:"15%"}} className="ms-3 bg-light rounded-circle p-1" src={google} alt="" srcSet="" />
+                    <img style={{width:"15%"}} className="ms-3 bg-light rounded-circle p-1" src={twitter} alt="" srcSet="" />
+                    <img style={{width:"15%"}} className="ms-3 bg-light rounded-circle p-1" src={youtube} alt="" srcSet="" />
                 </div>
             </div>
             <Border></Border>

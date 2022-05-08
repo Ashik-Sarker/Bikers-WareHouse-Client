@@ -13,7 +13,6 @@ const Header = () => {
         signOut(auth);
         navigate('/login');
     }
-    console.log(user);
     
     return (
         <Navbar sticky="top" className='py-4' collapseOnSelect expand="lg" bg="light" variant="light">

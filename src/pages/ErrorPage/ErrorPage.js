@@ -19,7 +19,7 @@ const ErrorPage = () => {
                 </Col>
                 <Col
                     xs={12} md={6}>
-                    <img className='w-100 my-auto' src={notFoundImg} alt="Not Found" srcset="" />
+                    <img className='w-100 my-auto' src={notFoundImg} alt="Not Found" srcSet="" />
                 </Col>
             </Row>
         </Container>

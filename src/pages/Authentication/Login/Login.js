@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef} from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Border from '../../Common/Border/Border';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 // import Loading from '../../Common/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -15,7 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
-    let err;
+    // let err;
 
     //login with react firebase hooks
     const [
@@ -37,11 +38,14 @@ const Login = () => {
     }
 
     //form handler
-    const handleUser = event => {
+    const handleUser = async event => {
         event.preventDefault();
         const email = emailRef?.current?.value;
         const pass = passRef?.current?.value;
-        signInWithEmailAndPassword(email, pass);
+
+        await signInWithEmailAndPassword(email, pass);
+        const { data } = await axios.post('https://fast-plains-14687.herokuapp.com/login', { email });
+        console.log(data);
     }
 
     const resetPassword = async() => {
