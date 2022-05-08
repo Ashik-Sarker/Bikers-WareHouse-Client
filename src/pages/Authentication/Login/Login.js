@@ -4,7 +4,9 @@ import Border from '../../Common/Border/Border';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import Loading from '../../Common/Loading/Loading';
+// import Loading from '../../Common/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -46,10 +48,12 @@ const Login = () => {
         const email = emailRef?.current?.value;
         await sendPasswordResetEmail(email);
         if (email) {
-            alert('send email');
+            // alert('send email');
+            toast("send email to your account")
         }
         else {
-            alert('Please add email first');
+            // alert('Please add email first');
+            toast('Please add email first then reset pass')
         }
     }
 
@@ -76,6 +80,7 @@ const Login = () => {
 
                 <p>Are you new? <span className='text-primary'><Link to='/registration' className='text-decoration-none'>Please create an account</Link></span></p>
             </form>
+            <ToastContainer />
             <Border></Border>
             <SocialLogin></SocialLogin>
         </div>
