@@ -43,7 +43,8 @@ const AddNewItem = () => {
                 <input className='my-1 p-2 w-50' type="text" name="supplierName" placeholder='Enter SupplierName' required /><br />
                 <input className='my-1 p-2 w-50' type="text" name="quantity" placeholder='Add Quantity' required/><br />
                 <input className='my-1 p-2 w-50' type="text" name="price" placeholder='Add Price' required/><br />
-                <input className='my-1 p-2 w-50' type="text" name="description" placeholder='Add Item Descriptions' required /><br />
+                {/* <input className='my-1 p-2 w-50' type="text" name="description" placeholder='Add Item Descriptions' required /><br /> */}
+                <textarea className='my-1 p-2 w-50' name="description" rows="5" cols="30" placeholder='Add Item Descriptions' required></textarea> <br />
                 <input className='my-1 p-2 w-50 bg-primary text-light border-0 fs-5' type="submit" value="Create Item" />
             </form>
         </div>
