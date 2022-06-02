@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <Navbar sticky="top" className='py-4' collapseOnSelect expand="lg" bg="light" variant="light">
         <Container fluid className='px-5'>
-            <Navbar.Brand style={{letterSpacing:"6px"}} className='fs-3 fw-bold text-primary me-5' as={Link} to='/' >BIKERS WAREHOUSE</Navbar.Brand>
+            <Navbar.Brand style={{letterSpacing:"6px"}} className='fs-3 fw-bold text-primary me-5' as={Link} to='/' >BIKERS WAREHOUSE MANAGEMENT</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
